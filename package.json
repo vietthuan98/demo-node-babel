@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/app.js"
+    "start": "node dist/app.js",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel src -d dist"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
     "@babel/node": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
